@@ -1,0 +1,6 @@
+language: r
+r: bioc-devel
+
+script:
+- R CMD build .
+- R CMD check *tar.gz

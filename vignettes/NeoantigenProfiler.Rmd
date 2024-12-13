@@ -1,0 +1,61 @@
+---
+title: "An Introduction to the Neoantigen Package"
+author: "Daniel Van Twisk"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteIndexEntry{1. An Introduction to the NeoantigenProfiler Package}
+  %\VignetteKeywords{sequence, sequencing}
+  %\VignettePackage{NeoatigenProfiler}
+  %\VignetteEngine{knitr::rmarkdown}
+output:
+  BiocStyle::html_document:
+    number_sections: yes
+    toc: true
+---
+
+```{r style, echo=FALSE, results='asis'}
+BiocStyle::markdown()
+```
+
+# Introduction
+
+Immunogenic targets such are vital for a sustained immune response
+against a pathogen. For cancer, neoantigens can be targetted to sustain
+an immune reaction against a tumor. However, cancer immunotherapy has
+not yet realized its potential to treat the disease. One reason why this
+failure exists is because a single set of neoantigens used in a
+treatment may only target a subset of the tumor cells, while another
+neoantigenically distinct lineage, may cause the tumor to reoccur. The
+`r Biocpkg("NeoantigenProfiler")` uses single-cell Longread-RNAseq data
+and the `r Biocpkg("FLAMES")` package to demulitplux and group like
+clusters of cells that share neoantigens.
+
+This package provides both a command line and shiny interface. It is
+able to perform the demultiplexing operations and list neoantigens
+available at various thresholds.
+
+The `r Biocpkg("NeoantigenProfiler")` package is available at
+[https://bioconductor.org](https://bioconductor.org) and can be
+installed via `BiocManager::install`:
+
+```{r BiocManager, eval=FALSE}
+if (!require("BiocManager"))
+    install.packages("BiocManager")
+```
+
+A package only needs to be installed once. Load the package into an
+R session with
+
+```{r initialize, results="hide", warning=FALSE, message=FALSE}
+library(NeoantigenProfiler)
+```
+
+
+# Session Information
+
+All of the output in this vignette was produced under the following
+conditions:
+
+```{r SessionInfo}
+sessionInfo()
+```

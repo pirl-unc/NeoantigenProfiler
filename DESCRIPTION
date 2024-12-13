@@ -1,0 +1,41 @@
+Package: NeoantigenProfiler
+Title: Determines Cell Groupings of Neoantigens from Longread-RNAseq Data
+Description: Immunogenic targets such are vital for a sustained immune response
+	against a pathogen. For cancer, neoantigens can be targetted to sustain
+	an immune reaction against a tumor. However, cancer immunotherapy has
+	not yet realized its potential to treat the disease. One reason why this
+	failure exists is because a single set of neoantigens used in a
+	treatment may only target a subset of the tumor cells, while another
+	neoantigenically distinct lineage, may cause the tumor to reoccur. This
+	package uses single-cell Longread-RNAseq data and the FLAMES package
+	to demulitplux and group like clusters of cells that share neoantigens.
+biocViews: Genetics, DataRepresentation, Sequencing
+Version: 0.0.1
+License: Artistic-2.0
+Encoding: UTF-8
+Authors@R: person("Daniel", "Van Twisk", email="dvantwisk@gmail.com", role= c("aut", "cre"))
+Imports:
+	BiocStyle,
+	DescTools,
+	dplyr,
+	DropletUtils,
+	ggplot2,
+	ggnetwork,
+	igraph,
+	lpSolve,
+	Matrix,
+	plotly,
+	Rcpp,
+	scater,
+	Seurat,
+	shiny,
+	shinyWidgets,
+	SingleCellExperiment,
+	splatter,
+	knitr
+Suggests: testthat
+LinkingTo: Rcpp
+Collate: wmst.R
+	app.R
+VignetteBuilder: knitr
+RoxygenNote: 7.3.2
